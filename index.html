@@ -111,7 +111,7 @@ function renderResources(){
  $('libraryContent').className='resource-grid';
  // Add your actual materials here, or replace this demo list with records from your backend.
  const samples=getResources(currentLevel,currentGrade,currentType);
- $('libraryContent').innerHTML=samples.map((r,i)=>`<article class="resource-card" data-search="${(r.title+' '+r.subject).toLowerCase()}"><div class="r-icon">${t.icon}</div><h3>${escapeHtml(r.title)}</h3><p>${escapeHtml(r.subject)}${r.url?' · PDF available':' · Sample placeholder'}</p>${r.url?`<a class="btn btn-primary" href="${escapeHtml(r.url)}" target="_blank" rel="noopener noreferrer">Open PDF ↗</a><a class="download-link" href="${escapeHtml(r.url)}" download>Download PDF ↓</a>`:`<button class="btn btn-primary" onclick='openResource(${JSON.stringify(r.title)},${JSON.stringify(r.subject)})'>Preview sample →</button>`}</article>`).join('');
+ $('libraryContent').innerHTML=samples.map((r,i)=>`<article class="resource-card" data-search="${(r.title+' '+r.subject).toLowerCase()}"><div class="r-icon">${t.icon}</div><h3>${escapeHtml(r.title)}</h3><p>${escapeHtml(r.subject)}${r.url?' · PDF available':' · Sample placeholder'}</p>${r.url?`<a class="btn btn-primary" href="${escapeHtml(r.url)}" target="_blank" rel="noopener noreferrer">Open PDF ↗</a><a class="download-link" href="${escapeHtml(r.RATIONALISED-GRADE-7-ENGLISH-NOTES.pdf)}" download>Download PDF ↓</a>`:`<button class="btn btn-primary" onclick='openResource(${JSON.stringify(r.title)},${JSON.stringify(r.subject)})'>Preview sample →</button>`}</article>`).join('');
  $('searchInput').value='';
 }
 function filterCards(){
